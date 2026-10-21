@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Working With Sets</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Monarch Club Members</h1>
+            <p>Manage club members using Python sets and set operators.</p>
+        </header>
+
+        <section class="panel">
+            <h2>Add new club member:</h2>
+
+            <div class="fields">
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" placeholder="Enter first name">
+                </div>
+
+                <div>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" placeholder="Enter last name">
+                </div>
+            </div>
+
+            <button id="add-button" py-click="add_member">Submit</button>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section class="results">
+            <h2>All members:</h2>
+            <div id="member-list"></div>
+            <div id="member-total" class="total"></div>
+        </section>
+    </main>
+
+    <script type="py" src="./main.py"></script>
+</body>
+</html>

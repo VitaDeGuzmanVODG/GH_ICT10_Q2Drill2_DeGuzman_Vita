@@ -1,0 +1,168 @@
+
+/* Color palette from the Coolors screenshot */
+:root {
+    --turquoise: #2DE1C2;
+    --pearl-aqua: #6AD5CB;
+    --muted-teal: #7FBEAB;
+    --sage: #7E998A;
+    --grey-olive: #85877C;
+    --ink: #163D3B;
+    --paper: #F5FFFC;
+}
+
+/* Apply consistent sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Main page background */
+body {
+    margin: 0;
+    padding: 36px 18px;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+
+    background: linear-gradient(
+        135deg,
+        var(--turquoise),
+        var(--pearl-aqua),
+        var(--muted-teal),
+        var(--sage)
+    );
+}
+
+/* Center the webpage content */
+main {
+    width: min(920px, 100%);
+    margin: 0 auto;
+}
+
+/* Page heading */
+header {
+    margin-bottom: 24px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+header p {
+    line-height: 1.5;
+}
+
+/* Input form panel */
+.panel {
+    padding: 30px;
+    margin-bottom: 22px;
+    background: var(--paper);
+    border-radius: 18px;
+    border: 1px solid #163D3B20;
+    box-shadow: 0 14px 38px #163D3B22;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* Display the two input boxes side by side */
+.fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* Input labels */
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+/* Text boxes */
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #B6D9D0;
+    border-radius: 9px;
+    background: #EAF8F5;
+    color: var(--ink);
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 2px solid var(--sage);
+    outline-offset: 2px;
+}
+
+/* Submit button */
+button {
+    margin-top: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 9px;
+    background: #267F72;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #18584F;
+}
+
+button:hover {
+    background: #1D6B60;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #18584F;
+}
+
+/* Member list panel */
+.results {
+    padding: 30px;
+    border-radius: 18px;
+    background: var(--grey-olive);
+    color: white;
+    box-shadow: 0 14px 38px #163D3B22;
+}
+
+/* Spacing between member names */
+#member-list {
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+/* Total members badge */
+.total {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: var(--turquoise);
+    color: var(--ink);
+    font-weight: bold;
+}
+
+/* Confirmation message */
+#message {
+    font-weight: bold;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 560px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .fields {
+        grid-template-columns: 1fr;
+    }
+
+    .panel,
+    .results {
+        padding: 20px;
+    }
+}
